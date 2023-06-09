@@ -1,38 +1,215 @@
-.App {
-  text-align: center;
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+body {
+  font-family: Verdana, Geneva, sans-serif;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.navbar {
   display: flex;
-  flex-direction: column;
   align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+  justify-content: space-between;
+  background-color: white;
+  color: #aaa;
+  height: 10vh;
+  width: 100%;
+  box-shadow: 0px 0px 5px gray;
+  position: fixed;
+  width: 100%;
+  top: 0;
+  left: 0;
+  padding: .5rem;
+}
+
+.logo .fn {
+  color: #123867;
+}
+
+.logo .ln {
+  color: orangered;
+}
+.search-box{
+  width: 30%;
+  height: 40px;
+  border-radius: 50px;
+  border: 2px solid #ddd;
+  overflow: hidden;
+}
+.search-box input{
+  height: 100%;
+  width: 100%;
+  padding: 10px;
+  outline: none;
+  border: none;
+  color: #aaa;
+  font-size: 14px;
+}
+.search-box input::placeholder{
+  color: #ccc;
+}
+.navbar a {
+  padding: .5rem;
+  border-radius: 5px;
+  background-color: orange;
+  text-decoration: none;
   color: white;
+  margin-right: 1rem;
+  z-index: 999;
 }
 
-.App-link {
-  color: #61dafb;
+.navbar a.active {
+  background-color: orangered;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.book-list {
+  min-height: 80vh;
+  width: 100%;
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  justify-items: center;
+  grid-row-start: auto;
+  grid-row-gap: 1rem;
+  margin-top: 7rem;
+}
+
+.book {
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+
+}
+
+img {
+  width: 200px;
+  height: 300px;
+  transition: all .5s ease;
+}
+
+img:hover {
+  cursor: pointer;
+
+}
+
+button {
+
+  padding: .8rem 3rem;
+  border-radius: 5px;
+  border: none;
+  outline: none;
+  background-color: orange;
+  color: white;
+  margin: .5rem auto;
+  cursor: pointer;
+  transition: all .5s ease;
+}
+
+button:hover {
+  background-color: orangered;
+}
+
+p {
+  padding: .5rem;
+}
+
+/* ------------ home page btns -----------------  */
+.btn-box {
+  width: 300px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.btn-box i {
+  font-size: 18px;
+}
+
+/* ------------------------ */
+.favorites {
+  min-height: 100vh;
+  width: 100%;
+  padding-top: 12vh;
+
+}
+
+.favorites .book {
+  margin: 2rem 0;
+
+}
+
+.btn-group {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.btn {
+  width: 45%;
+}
+
+.favorites p {
+  padding: 1rem;
+  background-color: #ddd;
+  color: #888;
+  width: 70%;
+  margin: 1rem auto;
+  border-radius: 5px;
+}
+.favorites .book-title p{
+  width: 100%;
+}
+/* ----------- Book Details Page ------  */
+.book-details{
+  min-height: 100vh;
+  width: 100%;
+  padding: 1rem;
+  padding-top: 12vh;
+  display: flex;
+  justify-content: space-between;
+  align-items: center ;
+}
+.detail-img-box{
+  width: 30%;
+}
+.detail-img-box img{
+  width: 80%;
+  height: 80%;
+  display: block;
+  margin: auto;
+}
+.detail-img-box .btn-box{
+  width: 100%;
+  padding: .5rem 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.detail-text-box{
+  width: 70%;
+}
+.detail-text-box h3{
+  color: #999;
+  font-size: 25px;
+  margin: .5rem 0;
+}
+.detail-text-box p{
+  padding: .5rem 0;
+  margin: .5rem 0;
+  color: #aaa;
+}
+/* ------------------ Footer --------------------  */
+.footer {
+  height: 10vh;
+  width: 100%;
+  text-align: center;
+  background-color: #123867;
+  color: white;
+  /* margin-top: 1rem; */
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
